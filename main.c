@@ -87,7 +87,6 @@ int reg_read(  i2c_inst_t *i2c,
  * Main
  */
 int main() {
-
     int16_t acc_x;
     int16_t acc_y;
     int16_t acc_z;
@@ -139,7 +138,6 @@ int main() {
 
     // Loop forever
     while (true) {
-
         // Read X, Y, and Z values from registers (16 bits each)
         reg_read(i2c, ADXL343_ADDR, REG_DATAX0, data, 6);
 
@@ -155,7 +153,6 @@ int main() {
 
         // Print results
         printf("X: %.2f | Y: %.2f | Z: %.2f\r\n", acc_x_f, acc_y_f, acc_z_f);
-
         sleep_ms(100);
     }
 }
